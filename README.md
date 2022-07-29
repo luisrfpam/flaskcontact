@@ -351,7 +351,7 @@ Retorna: 204 No Content
 	
 <p>
 	
-Deletar um contato não passando como paramêtro o CPF: DELETE /contacts/88889577321
+Deletar um contato não existente passando como paramêtro o CPF: DELETE /contacts/88889577321
 ```
 $ curl -X DELETE http://127.0.0.1:5000/contacts/88889577321
 ```
@@ -375,8 +375,21 @@ $ sudo apt-get install python-pytest
 ```
 
 O Pytest é um framework ou uma ferramenta para escrever testes no desenvolvimento de software e bibliotecas em Python.
-Vamos precisar instalar o DotEnv também.
 
 #### Lembre-se que antes de instalar qualquer lib você deve está com o Ambiente Virtual ativado
 
+Todos os testes estão dentro do diretório tests
+	
+Para executar os testes e ver os resultados execute o seguinte comando:
 
+```
+pytest -v
+```
+
+Retorno esperado dos testes:
+
+![image](https://user-images.githubusercontent.com/16855746/181662523-9491187f-651a-4bff-b1a4-acb5785546a4.png)
+
+Obrigado!
+Att,
+Luis Portela
