@@ -13,9 +13,11 @@ if isfile(_ENV_FILE):
 # Cria uma fixture que será utilizada no escopo sessão
 # ou seja a cada execução do comando pytest
 
+
 @pytest.fixture(scope='session')
 def client():
     from apps import create_app
+
     # instancia nossa função factory criada anteriormente
     flask_app = create_app('testing')
 
@@ -30,7 +32,7 @@ def client():
     ctx.push()
 
     # retorna o client criado
-    yield testing_client  # this is where the testing happens!
+    yield testing_client  # aqui é onde o teste acontece :)
 
     # remove o contexto ao terminar os testes
     ctx.pop()

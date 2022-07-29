@@ -164,7 +164,7 @@ Retorna: 200 OK
 {
     "data": [
         {
-            "cpf": "88584577320",
+            "cpf": "88889577320",
             "email": "luis@gmail.com",
             "endereco": "Rua Vicente Reis, n.504, Betania",
             "nome": "Luis Ricardo Farias Portela",
@@ -200,16 +200,16 @@ Retorna: 200 OK
 
 <p>
 	
-Listar um contato passando como paramêtro o CPF (se existir): GET /contacts/88584577320
+Listar um contato passando como paramêtro o CPF (se existir): GET /contacts/88889577320
 ```
-$ curl -o saida.json http://127.0.0.1:5000/contacts/88584577320
+$ curl -o saida.json http://127.0.0.1:5000/contacts/88889577320
 ```
 
 Retorna: 200 OK
 ```JSON
 {
     "data": {
-        "cpf": "88584577320",
+        "cpf": "88889577320",
         "email": "luis@gmail.com",
         "endereco": "Rua Vicente Reis, n.504, Betania",
         "nome": "Luis Ricardo Farias Portela",
@@ -223,9 +223,9 @@ Retorna: 200 OK
 
 <p>
 	
-Listar um contato passando como paramêtro o CPF (se não existir): GET /contacts/88584577320
+Listar um contato passando como paramêtro o CPF (se não existir): GET /contacts/88889577320
 ```
-$ curl -o saida.json http://127.0.0.1:5000/contacts/88584577320
+$ curl -o saida.json http://127.0.0.1:5000/contacts/88889577320
 ```
 
 Retorna: 200 OK
@@ -334,9 +334,9 @@ Retorna: 404 NOT FOUND
 
 DELETE
 
-Deletar um contato existente passando como paramêtro o CPF: DELETE /contacts/88584577320
+Deletar um contato existente passando como paramêtro o CPF: DELETE /contacts/88889577320
 ```
-$ curl -X DELETE http://127.0.0.1:5000/contacts/88584577320
+$ curl -X DELETE http://127.0.0.1:5000/contacts/88889577320
 ```
 
 Retorna: 204 No Content

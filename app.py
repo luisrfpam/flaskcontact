@@ -21,6 +21,4 @@ if __name__ == '__main__':
     debug = app.config['DEBUG']
 
     # inicializa o servidor Web do Flask
-    app.run(
-        host=ip, debug=debug, port=port, use_reloader=debug
-    )
+    app.run(host=ip, debug=debug, port=port, use_reloader=debug)
