@@ -383,7 +383,7 @@ Todos os testes estão dentro do diretório tests
 Para executar os testes e ver os resultados execute o seguinte comando:
 
 ```
-pytest -v
+$ pytest -v
 ```
 
 Retorno esperado dos testes:
