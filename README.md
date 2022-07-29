@@ -1,6 +1,6 @@
 # Flask Contact
 
-Desenvolvimento de um simples CRUD considerando a Entidade conforme Figura-1.
+Desenvolvimento de um CRUD considerando a Entidade conforme Figura-1.
 <p>
 
 ![image](https://user-images.githubusercontent.com/16855746/181521873-a9b4afe0-1d15-438f-ba3e-de441c3b5c44.png)
