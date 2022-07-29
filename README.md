@@ -112,6 +112,14 @@ $ pip install Flask-RESTful
 ```
 
 Flask é instalado automaticamente com todas as dependências.
+
+#### 8.2 Instalando DotEnv
+	
+O dotenv é usado para ler o par de chave e valor do arquivo .env e adicioná-lo à variável de ambiente. Podemos usá-lo para gerenciar as configurações do aplicativo durante as fases de desenvolvimento e produção
+
+```
+$ pip install python-dotenv 
+```
 	
 ----------------------------------------------------------------------------------------------------------
 ## API Flask Contact
@@ -166,14 +174,14 @@ Retorna: 200 OK
         {
             "cpf": "88889577320",
             "email": "luis@gmail.com",
-            "endereco": "Rua Vicente Reis, n.504, Betania",
-            "nome": "Luis Ricardo Farias Portela",
+            "endereco": "Rua Vicente Menezes, n.100, Alto Rio",
+            "nome": "Luis Roberto Marinho",
             "telefone": "92984030269"
         },
         {
             "cpf": "98684577420",
             "email": "carlos@gmail.com",
-            "endereco": "Rua Odimar Santana, n.45, Armando Mendes",
+            "endereco": "Rua Castro Alves, n.45, São Jose",
             "nome": "Carlos Eduardo Silva",
             "telefone": "19994090268"
         },
@@ -211,28 +219,28 @@ Retorna: 200 OK
     "data": {
         "cpf": "88889577320",
         "email": "luis@gmail.com",
-        "endereco": "Rua Vicente Reis, n.504, Betania",
-        "nome": "Luis Ricardo Farias Portela",
+        "endereco": "Rua Vicente Menezes, n.100, Alto Rio",
+        "nome": "Luis Roberto Marinho",
         "telefone": "92984030269"
     },
     "message": "Recurso(s) Contacts recuperado.",
-    "resource": "Contacts",
+    "resource": "Contact",
     "status": 200
 }
 ```
 
 <p>
 	
-Listar um contato passando como paramêtro o CPF (se não existir): GET /contacts/88889577320
+Listar um contato passando como paramêtro o CPF (se não existir): GET /contacts/88889577328
 ```
-$ curl -o saida.json http://127.0.0.1:5000/contacts/88889577320
+$ curl -o saida.json http://127.0.0.1:5000/contacts/88889577328
 ```
 
 Retorna: 200 OK
 ```JSON
 {
     "message": "Recurso Sem dados.",
-    "resource": "Contacts",
+    "resource": "Contact",
     "status": 200
 }
 ```
@@ -266,7 +274,7 @@ Retorna: 201 CREATED
         "nome": "Felipe Bastos",
         "telefone": "19997457967"
     },
-    "message": "Recurso Contact criado.",
+    "message": "Recurso Contacts criado.",
     "resource": "Contacts",
     "status": 201
 }
@@ -301,7 +309,7 @@ Retorna: 200 OK
         "telefone": "19997457967"
     },
     "message": "Recurso Contacts atualizado.",
-    "resource": "Contacts",
+    "resource": "Contact",
     "status": 200
 }
 ```
@@ -328,7 +336,7 @@ Retorna: 404 NOT FOUND
 ```JSON
 {
     "message": "Este(a) contato não existe.",
-    "resource": "Contacts"
+    "resource": "Contact"
 }
 ```
 
@@ -340,6 +348,21 @@ $ curl -X DELETE http://127.0.0.1:5000/contacts/88889577320
 ```
 
 Retorna: 204 No Content
+	
+<p>
+	
+Deletar um contato não passando como paramêtro o CPF: DELETE /contacts/88889577321
+```
+$ curl -X DELETE http://127.0.0.1:5000/contacts/88889577321
+```
+
+Retorna: 404 NOT FOUND
+```JSON
+{
+    "message": "Este(a) contato não existe.",
+    "resource": "Contact"
+}
+```
 
 ----------------------------------------------------------------------------------------------------------
 ## API Flask com TDD
@@ -353,12 +376,6 @@ $ sudo apt-get install python-pytest
 
 O Pytest é um framework ou uma ferramenta para escrever testes no desenvolvimento de software e bibliotecas em Python.
 Vamos precisar instalar o DotEnv também.
-	
-O dotenv é usado para ler o par de chave e valor do arquivo .env e adicioná-lo à variável de ambiente. Podemos usá-lo para gerenciar as configurações do aplicativo durante as fases de desenvolvimento e produção
-
-```
-$ pip install python-dotenv 
-```
 
 #### Lembre-se que antes de instalar qualquer lib você deve está com o Ambiente Virtual ativado
 
